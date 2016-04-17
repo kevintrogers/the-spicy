@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Special+Elite|Oswald:400,300,700);
+
+$title: 'Oswald', serif;
+$primary-font: 'Special Elite', display;
+$post-bg: white;
+$background: #e4e4e4;
+$trim: 1px solid #000;
+ h1 {
+  
+    font-size: 2rem;
+    line-height: 1.5em;
+    letter-spacing:.015em;    
+    text-align: center;
+    background:none;
+    font-family: $primary-font;
+    font-weight:300;
+    
+}
+#post{
+  background: $background;
+}
+
+.panel-header{
+  position: relative;
+  background: $post-bg;
+  z-index:1;
+  top:1em;
+  border: $trim;
+  font-family: $title;
+  text-align:center;
+  text-transform:uppercase;
+}
+.post_panel {
+  font-family: $primary-font;
+  background: $post-bg;
+  border: $trim;
+  padding:1em; 
+  float:left;
+  margin-bottom:1em;
+  padding: 1em 1.8em;
+  margin-left:auto;
+  margin-right:auto;
+}
+.post_panel p {
+  clear:right;
+
+}
+.side-panel{
+  @extend .post_panel;
+  border: $trim;
+  float:right !important;
+}
+.side-panel .panel-header{
+  position: relative;
+  top: -1.8em;
+}
+.panel ul {
+  list-style:none;
+  }
+.hero {
+  
+  background: url('http://u83341670@s605611687.onlinehome.us/img/multi-colored_peppers.jpeg') no-repeat center center;
+  background-size: cover;
+  height: 85vh;
+  &:before {
+    content: '';
+		position: relative;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+		opacity: 0.8; 
+  }
+  .intro {
+    padding: 3rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+    background:none;
+  }
+
+  p {
+    color: #fff;
+    line-height: 1.75em;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .tech-img {
+    background: url('https://static.pexels.com/photos/6347/coffee-cup-working-happy-medium.jpg') no-repeat center center;
+    background-size: cover;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    display: block;
+    margin: 8.8em auto auto auto;
+  }
+   
+  @media only screen and (min-width: 40.063em) {
+    .tech-img {
+      height: 18rem;
+      width: 18rem;
+    }
+    h1 {
+      padding-top: 4.5rem;
+      text-align: right;
+      font-size: 2.5rem;
+    }
+    p {
+      text-align: right;
+    }
+  }
+
+}
+
+
